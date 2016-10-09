@@ -8,3 +8,4 @@ npm-debug.log
 # Intellij project files
 .idea
 *.iml
+/node_modules
