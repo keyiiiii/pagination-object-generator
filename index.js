@@ -50,7 +50,7 @@ export default function paginationGenerator(offset, limit, totalCount, showCount
     const begin = index - remain;
     const end = index + nextCount;
 
-    pages = pages.slice(begin, end);;
+    pages = pages.slice(begin, end);
   }
 
   result.pages = pages;
