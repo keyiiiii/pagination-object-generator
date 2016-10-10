@@ -5,7 +5,7 @@ Generate pagination object.
 
 It does not depend on the library.
 
-##[DEMO](http://keyiiiii.github.io/pagination-generator/)
+##[DEMO](http://keyiiiii.github.io/pagination-generator/example/)
 
 ##Usage
 `npm install pagination-generator`
