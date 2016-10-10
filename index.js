@@ -2,14 +2,14 @@
 
 // TODO: test
 /**
- * paginationGenerator
+ * paginationObjectGenerator
  * @param {number} offset
  * @param {number} limit
  * @param {number} totalCount
  * @param {number} showCount
  * @returns {object} paging object
  */
-export default function paginationGenerator(offset, limit, totalCount, showCount) {
+export default function paginationObjectGenerator(offset, limit, totalCount, showCount) {
   let result = {};
   let pages = [];
   let nextCount = showCount - 1;

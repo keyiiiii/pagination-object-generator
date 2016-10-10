@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import PaginationGenerator from "../../dist";
+import PaginationObjectGenerator from "../../dist";
 
-class PaginationGeneratorEx extends React.PureComponent {
+class PaginationObjectGeneratorEx extends React.PureComponent {
   
   constructor() {
     super();
@@ -16,7 +16,7 @@ class PaginationGeneratorEx extends React.PureComponent {
   }
 
   cache() {
-    const pagination = PaginationGenerator(this.offset, this.limit, this.totalCount, this.showCount);
+    const pagination = PaginationObjectGenerator(this.offset, this.limit, this.totalCount, this.showCount);
     this.setState({ pagination });
   }
 
@@ -88,7 +88,7 @@ class PaginationGeneratorEx extends React.PureComponent {
           <header className="page-header">
             <h1>
               <span style={{ verticalAlign: "middle" }}>Pagination DEMO</span>
-              <a href="https://github.com/keyiiiii/pagination-generator"
+              <a href="https://github.com/keyiiiii/pagination-object-generator"
                  className="btn btn-block btn-lg btn-info"
                  target="_blank"
                  style={{ display: "inline", marginLeft: "20px" }}>Source</a>
@@ -186,4 +186,4 @@ class PaginationGeneratorEx extends React.PureComponent {
   }
 }
 
-ReactDOM.render(<PaginationGeneratorEx />, document.getElementById("root"));
+ReactDOM.render(<PaginationObjectGeneratorEx />, document.getElementById("root"));

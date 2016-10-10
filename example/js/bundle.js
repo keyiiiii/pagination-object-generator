@@ -1,17 +1,17 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 "use strict";
-function paginationGenerator(e, r, t, a) {
-  for (var n = {}, i = [], o = a - 1, s = e / r, f = 0; f <= s + a; f++) {
-    var u = f * r + 1,
-        p = (f + 1) * r;if (p > t && (p = t), t < u) break;i.push({ offset: f * r, current: s === f, firstNum: u, secondNum: p, pageNum: f + 1 });
-  }if (0 === s && (o = a), t / r > a) {
-    var l = i.slice(s, s + o),
-        c = a - l.length,
-        g = s - c,
+function paginationObjectGenerator(e, t, r, a) {
+  for (var n = {}, i = [], o = a - 1, s = e / t, f = 0; f <= s + a; f++) {
+    var u = f * t + 1,
+        c = (f + 1) * t;if (c > r && (c = r), r < u) break;i.push({ offset: f * t, current: s === f, firstNum: u, secondNum: c, pageNum: f + 1 });
+  }if (0 === s && (o = a), r / t > a) {
+    var p = i.slice(s, s + o),
+        l = a - p.length,
+        g = s - l,
         v = s + o;i = i.slice(g, v);
-  }n.pages = i;var d = e - r,
-      h = e + r;return 0 === e && (d = !1), (t - e < 0 || t <= r + e) && (h = !1), n.paging = { prev: d, next: h }, n.last = { index: Math.ceil(t / r), offset: Math.floor(t / r) * r }, n;
-}Object.defineProperty(exports, "__esModule", { value: !0 }), exports.default = paginationGenerator;
+  }n.pages = i;var d = e - t,
+      b = e + t;return 0 === e && (d = !1), (r - e < 0 || r <= t + e) && (b = !1), n.paging = { prev: d, next: b }, n.last = { index: Math.ceil(r / t), offset: Math.floor(r / t) * t }, n;
+}Object.defineProperty(exports, "__esModule", { value: !0 }), exports.default = paginationObjectGenerator;
 
 },{}],2:[function(require,module,exports){
 "use strict";
@@ -38,13 +38,13 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var PaginationGeneratorEx = function (_React$PureComponent) {
-  _inherits(PaginationGeneratorEx, _React$PureComponent);
+var PaginationObjectGeneratorEx = function (_React$PureComponent) {
+  _inherits(PaginationObjectGeneratorEx, _React$PureComponent);
 
-  function PaginationGeneratorEx() {
-    _classCallCheck(this, PaginationGeneratorEx);
+  function PaginationObjectGeneratorEx() {
+    _classCallCheck(this, PaginationObjectGeneratorEx);
 
-    var _this = _possibleConstructorReturn(this, (PaginationGeneratorEx.__proto__ || Object.getPrototypeOf(PaginationGeneratorEx)).call(this));
+    var _this = _possibleConstructorReturn(this, (PaginationObjectGeneratorEx.__proto__ || Object.getPrototypeOf(PaginationObjectGeneratorEx)).call(this));
 
     _this.state = {
       pagination: {}
@@ -56,7 +56,7 @@ var PaginationGeneratorEx = function (_React$PureComponent) {
     return _this;
   }
 
-  _createClass(PaginationGeneratorEx, [{
+  _createClass(PaginationObjectGeneratorEx, [{
     key: "cache",
     value: function cache() {
       var pagination = (0, _dist2.default)(this.offset, this.limit, this.totalCount, this.showCount);
@@ -153,7 +153,7 @@ var PaginationGeneratorEx = function (_React$PureComponent) {
               ),
               _react2.default.createElement(
                 "a",
-                { href: "https://github.com/keyiiiii/pagination-generator",
+                { href: "https://github.com/keyiiiii/pagination-object-generator",
                   className: "btn btn-block btn-lg btn-info",
                   target: "_blank",
                   style: { display: "inline", marginLeft: "20px" } },
@@ -304,10 +304,10 @@ var PaginationGeneratorEx = function (_React$PureComponent) {
     }
   }]);
 
-  return PaginationGeneratorEx;
+  return PaginationObjectGeneratorEx;
 }(_react2.default.PureComponent);
 
-_reactDom2.default.render(_react2.default.createElement(PaginationGeneratorEx, null), document.getElementById("root"));
+_reactDom2.default.render(_react2.default.createElement(PaginationObjectGeneratorEx, null), document.getElementById("root"));
 
 },{"../../dist":1,"react":173,"react-dom":29}],3:[function(require,module,exports){
 (function (process){

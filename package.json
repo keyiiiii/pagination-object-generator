@@ -1,5 +1,5 @@
 {
-  "name": "pagination-generator",
+  "name": "pagination-object-generator",
   "version": "0.0.1",
   "description": "Generate pagination object.",
   "main": "./dist/index.js",
@@ -8,20 +8,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/keyiiiii/pagination-generator.git"
+    "url": "git+https://github.com/keyiiiii/pagination-object-generator.git"
   },
   "keywords": [
     "pagination",
     "paging",
     "generator",
+    "object",
     "utils"
   ],
   "author": "keyiiiii",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/keyiiiii/pagination-generator/issues"
+    "url": "https://github.com/keyiiiii/pagination-object-generator/issues"
   },
-  "homepage": "https://github.com/keyiiiii/pagination-generator#readme",
+  "homepage": "https://github.com/keyiiiii/pagination-object-generator#readme",
   "devDependencies": {
     "babel-preset-es2015": "^6.16.0",
     "babel-preset-react": "^6.16.0",
