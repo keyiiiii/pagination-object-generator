@@ -1,17 +1,17 @@
-pagination-generator
+pagination-object-generator
 ==========
 
 Generate pagination object.
 
 It does not depend on the library.
 
-##[DEMO](http://keyiiiii.github.io/pagination-generator/example/)
+##[DEMO](http://keyiiiii.github.io/pagination-object-generator/example/)
 
 ##Usage
-`npm install pagination-generator`
+`npm install pagination-object-generator`
 
 ```javascript
-import pagination from "pagination-generator";
+import pagination from "pagination-object-generator";
 
 const offset = 0;
 const limit = 20;
