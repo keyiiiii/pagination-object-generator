@@ -1,6 +1,6 @@
 {
   "name": "pagination-object-generator",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Generate pagination object.",
   "main": "./dist/index.js",
   "scripts": {
