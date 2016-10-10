@@ -9,7 +9,7 @@
  * @param {number} showCount
  * @returns {object} paging object
  */
-export function paginationGenerator(offset, limit, totalCount, showCount) {
+export default function paginationGenerator(offset, limit, totalCount, showCount) {
   let result = {};
   let pages = [];
   let nextCount = showCount - 1;
@@ -55,8 +55,8 @@ export function paginationGenerator(offset, limit, totalCount, showCount) {
 
   result.pages = pages;
 
-  let pagingPrev = String(offset - limit);
-  let pagingNext = String(offset + limit);
+  let pagingPrev = offset - limit;
+  let pagingNext = offset + limit;
 
   if (offset === 0) {
     pagingPrev = false;

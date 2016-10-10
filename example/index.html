@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Pagination</title>
+  <!-- Loading Bootstrap -->
+  <link href="css/bootstrap.css" rel="stylesheet">
+
+  <!-- Loading Flat UI -->
+  <link href="css/flat-ui.css" rel="stylesheet">
+  <link href="css/demo.css" rel="stylesheet">
+  <style>
+  #app .paging-ovr {
+    color: #d6dbdf;
+  }
+  #app .paging-ovr:hover {
+    color: #fff;
+  }
+  #app .paging-current-ovr {
+    background:#7f8c9a;
+  }
+  #app .paging-current-ovr:hover {
+    border-color:#7f8c9a;
+  }
+  .pagination ul li > a, .pagination ul li > span {
+    margin: 17px 8px 16px;
+    padding: 10px 14px;
+    font-size: 24px;
+    line-height: 22px;
+  }
+  .pagination ul li.next a,
+  .pagination ul li.previous a {
+    height: 85px;
+    line-height: 3.6;
+  }
+  .login-form:before {
+    content: none;
+  }
+  </style>
+</head>
+<body id="app">
+  <div id="root"></div>
+  <script src="./js/bundle.js"></script>
+</body>
+</html>

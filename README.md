@@ -16,8 +16,9 @@ import pagination from "pagination-generator";
 const offset = 0;
 const limit = 20;
 const totalCount = 1000;
+const showCount = 4;
 
-const results = pagination(offset, limit, totalCount);
+const results = pagination(offset, limit, totalCount, showCount);
 ```
 
 
@@ -58,6 +59,6 @@ last:{
 },
 paging:{
   "prev": false,
-  "next": "20"
+  "next": 20
 }
 ```
