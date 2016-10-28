@@ -1,1 +1,87 @@
-"use strict";function paginationObjectGenerator(e,t,r,a){for(var n={},i=[],o=a-1,s=e/t,f=0;f<=s+a;f++){var u=f*t+1,c=(f+1)*t;if(c>r&&(c=r),r<u)break;i.push({offset:f*t,current:s===f,firstNum:u,secondNum:c,pageNum:f+1})}if(0===s&&(o=a),r/t>a){var p=i.slice(s,s+o),l=a-p.length,g=s-l,v=s+o;i=i.slice(g,v)}n.pages=i;var d=e-t,b=e+t;return 0===e&&(d=!1),(r-e<0||r<=t+e)&&(b=!1),n.paging={prev:d,next:b},n.last={index:Math.ceil(r/t),offset:Math.floor(r/t)*t},n}Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=paginationObjectGenerator;
+"use strict";
+
+/**
+ * paginationObjectGenerator
+ * @param {number} offset
+ * @param {number} limit
+ * @param {number} totalCount
+ * @param {number} showCount
+ * @returns {object} paging object
+ */
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = paginationObjectGenerator;
+function paginationObjectGenerator(offset, limit, totalCount, showCount) {
+  var result = {};
+  var pages = [];
+  var nextCount = showCount - 1;
+  var index = offset / limit;
+
+  for (var i = 0; i <= index + showCount; i++) {
+    var firstNum = i * limit + 1;
+    var secondNum = (i + 1) * limit;
+
+    if (secondNum > totalCount) {
+      secondNum = totalCount;
+    }
+
+    if (totalCount < firstNum) {
+      break;
+    }
+
+    // set pagination
+    pages.push({
+      offset: i * limit,
+      current: index === i,
+      firstNum: firstNum,
+      secondNum: secondNum,
+      pageNum: i + 1
+    });
+  }
+
+  if (index === 0) {
+    nextCount = showCount;
+  }
+
+  if (totalCount / limit > showCount) {
+
+    var nextPages = pages.slice(index, index + nextCount);
+
+    var remain = showCount - nextPages.length;
+
+    var begin = index - remain;
+    var end = index + nextCount;
+
+    pages = pages.slice(begin, end);
+  }
+
+  result.pages = pages;
+
+  var pagingPrev = offset - limit;
+  var pagingNext = offset + limit;
+
+  if (offset === 0) {
+    pagingPrev = false;
+  }
+
+  if (totalCount - offset < 0 || totalCount <= limit + offset) {
+    pagingNext = false;
+  }
+
+  result.paging = {
+    prev: pagingPrev,
+    next: pagingNext
+  };
+
+  /**
+   * last page index
+   */
+  result.last = {
+    index: Math.ceil(totalCount / limit),
+    offset: Math.floor(totalCount / limit) * limit
+  };
+
+  return result;
+}

@@ -1,6 +1,5 @@
 "use strict";
 
-// TODO: test
 /**
  * paginationObjectGenerator
  * @param {number} offset
