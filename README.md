@@ -1,5 +1,7 @@
 pagination-object-generator
-==========
+===========================
+
+[![CircleCI](https://circleci.com/gh/keyiiiii/pagination-object-generator/tree/master.svg?style=shield)](https://circleci.com/gh/keyiiiii/pagination-object-generator/tree/master)
 
 Generate pagination object.
 
